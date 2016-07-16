@@ -9,8 +9,8 @@ cache:
   - $HOME/.m2
 before_install: wget https://gist.githubusercontent.com/Doridian/01cb63301fe4d022f533bd221e227970/raw/0771d2c50808b295abfbabe266be7368c3273974/settings.xml
   -O settings.bin
-script: mvn deploy -DaltDeploymentRepository=deployment-repo-id::default::https://maven.doridian.net/repository/maven-snapshots/
-  --settings settings.bin
+script: ./build.sh 'mvn deploy -DaltDeploymentRepository=deployment-repo-id::default::https://maven.doridian.net/repository/maven-snapshots/
+  --settings settings.bin'
 env:
   global:
   - secure: cGtW3sKDTESYsZYl+i5dOdMMNBgbQ1rLhiCc/s7zpxCnjxg3Nauajh3u4ZX/cvsW5hpNRQ3S/0ytGNj4fDAg5tikRPeoyPcm6ng1Z72Gonrl0d6M/di4nGs61IFwQhookrZOiC5P82Rh5YVwmEmr0cTJ79eJdtDOS9lkufF/RO+kKe0qzD56+FpWbF4IAZipQEpwrQAn4gP50bVusSiL9FV7D89DXMUwfu0zOJ141U0bC8yKSrGuZK8jVgdCru7x6kwdZKjIMk23VtKmoxOdv9+Jn/DMgqe6IL9oZBVIprM9LZM0+PJAw21z5rMlrJshksjY+14uDzxZ08c5s1wfmAVKkFcZ5yKxBkl0qPk8p7kV8LGsijD2ISIRBHaPCvGgUJ0tcmiirH0zkHG7L+o+Y4pXeZw8BqkztyGmd3tk8NIXpSpaSWQXVYhCSGL/r20HQfYYryY6nmdD4UInZ8Oi/1dOJFFhYzkZRZnOaH3MydH02D/i4kEC1Wzx3KztxRc+tZ1ePFDhozNbRk/GjQctlarr5h3w5lKvpzhUZxssA/SgLzibabTjCxyEA0mngbmQ6ctvpSYVasi9z7Lz1s66ou+H/JH9uUi5ebQ/fk1NAsBe1gwx/QnnLKNp9C05O6fcFNdNitns676eCvg161DvGCn1eC7E3GRxm46ANH1IBSg=
