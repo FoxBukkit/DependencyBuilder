@@ -1,5 +1,5 @@
 sudo: false
-language: bash
+language: java
 notifications:
   email: false
 jdk:
@@ -7,9 +7,9 @@ jdk:
 cache:
   directories:
   - $HOME/.m2
-before_install: wget https://gist.githubusercontent.com/Doridian/01cb63301fe4d022f533bd221e227970/raw/0771d2c50808b295abfbabe266be7368c3273974/settings.xml
+install: wget https://gist.githubusercontent.com/Doridian/01cb63301fe4d022f533bd221e227970/raw/0771d2c50808b295abfbabe266be7368c3273974/settings.xml
   -O settings.bin
-script: ./build.sh 'mvn deploy -DaltDeploymentRepository=deployment-repo-id::default::https://maven.doridian.net/repository/maven-snapshots/
+script: bash build.sh '-DaltDeploymentRepository=deployment-repo-id::default::https://maven.doridian.net/repository/maven-snapshots/ -DrepositoryId=deployment-repo-id -Durl=https://maven.doridian.net/repository/maven-snapshots/
   --settings settings.bin'
 env:
   global:
