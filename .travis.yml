@@ -1,5 +1,5 @@
 sudo: false
-language: java
+language: bash
 notifications:
   email: false
 jdk:
