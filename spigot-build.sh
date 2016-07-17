@@ -8,4 +8,4 @@ wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifac
 java -jar BuildTools.jar
 
 cd Spigot
-mvn deploy $MAVEN_ARGUMENTS
+./apache-maven-3.2.5/bin/mvn clean deploy $MAVEN_ARGUMENTS
